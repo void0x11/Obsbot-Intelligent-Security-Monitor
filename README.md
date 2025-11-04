@@ -1,8 +1,8 @@
-# Detection-Triggered Recorder
+# OBSBOT Tiny2 Intelligent Security Monitor
 
-**Intelligent event-driven surveillance system with real-time human detection, automatic recording, and persistent snapshot evidence.**
+**Professional event-driven surveillance system with real-time human detection, automatic recording, and persistent snapshot evidence.**
 
-An AI-powered security monitoring application that automatically captures video and timestamped snapshots when humans are detected, providing comprehensive evidence even if the camera connection is interrupted.
+An AI-powered security monitoring application purpose-built for OBSBOT Tiny2 USB cameras. Automatically captures timestamped video and snapshots when humans are detected, providing comprehensive evidence even if the camera connection is interrupted.
 
 ---
 
@@ -28,7 +28,7 @@ An AI-powered security monitoring application that automatically captures video 
   - 🟢 **System Status** - Real-time system health monitoring
 - **Live Video Feed**: Real-time camera stream with detection bounding boxes
 - **Maximizable Window**: Resize to any screen size
-- **USB Camera Support**: Works with OBSBOT Tiny 2, standard webcams, and V4L2 devices
+- **OBSBOT Tiny2 Optimized**: Perfectly calibrated for OBSBOT Tiny2 USB camera
 
 ---
 
@@ -77,7 +77,7 @@ If No Person After 6 Sec → Stop Recording
 
 ### Prerequisites
 - Windows 10/11, macOS, or Linux
-- USB camera or webcam
+- OBSBOT Tiny2 USB camera (or compatible USB webcam)
 - 4GB RAM (8GB recommended)
 - 20GB free disk space (for recordings)
 
@@ -86,28 +86,29 @@ If No Person After 6 Sec → Stop Recording
 **Option A: Standalone Executable** (Recommended)
 ```bash
 # Just download and run:
-Detection-Triggered Recorder.exe
+OBSBOT Tiny2 Intelligent Security Monitor.exe
 ```
 No Python or additional setup needed!
 
 **Option B: From Source**
 ```bash
 pip install -r requirements.txt
-python detection_triggered_recorder_dark.py
+python OBSBOT_Tiny2_Intelligent_Security_Monitor.py
 ```
 
 ---
 
 ## 🚀 Usage
 
-1. **Launch Application**: Run the executable or Python script
-2. **Connect USB Camera**: Application automatically detects and selects USB camera
-3. **Start Monitoring**: System enters continuous monitoring mode immediately
-4. **Monitor Indicators**:
+1. **Connect OBSBOT Tiny2**: USB connection to computer
+2. **Launch Application**: Run the executable or Python script
+3. **Auto Detection**: System automatically detects and selects the camera
+4. **Start Monitoring**: System enters continuous monitoring mode immediately
+5. **Monitor Indicators**:
    - Green = Safe/Normal
    - Red = Active/Alert
    - Orange = Transitional (Cooldown)
-5. **Exit**: Click "Exit" button to cleanly stop all recording and close application
+6. **Exit**: Click "Exit" button to cleanly stop all recording and close application
 
 ### Output Files
 
@@ -119,7 +120,7 @@ After monitoring, check:
 
 ## ⚙️ Configuration
 
-All settings editable in `detection_triggered_recorder_dark.py`:
+All settings editable in `OBSBOT_Tiny2_Intelligent_Security_Monitor.py`:
 
 | Setting | Location | Value | Purpose |
 |---------|----------|-------|---------|
@@ -130,7 +131,7 @@ All settings editable in `detection_triggered_recorder_dark.py`:
 ### Recommended Configuration
 
 ```python
-# Detection sensitivity - balanced for office environments
+# Detection sensitivity - balanced for indoor environments
 confidence_threshold = 0.5  # Good balance between sensitivity and accuracy
 
 # Recording cooldown - 6 seconds
@@ -188,21 +189,10 @@ screenshot_cooldown = 15  # Provides clear timeline of detection event
 - **Video Processing**: OpenCV with H.264 codec
 - **Threading**: 4 concurrent threads (Camera, Detection, Recording, Screenshots)
 
-**Supported Formats**
-- Video: MP4 (H.264, 1920×1080, 30 FPS)
-- Images: JPEG with timestamp overlay
-- Timestamp: Local system time, formatted as YYYY-MM-DD HH:MM:SS
-
----
-
-## 🎓 Research Applications
-
-Designed for researchers working on:
-- Real-time computer vision systems
-- Event-driven surveillance algorithms
-- Human detection and tracking
-- Video analytics pipelines
-- AI-enabled monitoring systems
+**Supported Hardware**
+- **Camera**: OBSBOT Tiny2, standard USB webcams, V4L2-compliant devices
+- **Resolution**: 1920×1080 @ 30 FPS
+- **Output Format**: MP4 video + JPEG snapshots
 
 ---
 
@@ -226,10 +216,10 @@ This architecture ensures:
 
 | Issue | Solution |
 |-------|----------|
-| No USB camera detected | Reconnect camera, restart application |
+| Camera not detected | Reconnect OBSBOT Tiny2, check USB port, restart application |
 | Low detection accuracy | Increase lighting, adjust confidence threshold (lower value) |
-| High CPU usage | Use lighter detection model, reduce frame resolution |
-| Large file sizes | Normal with 1920×1080 @ 30 FPS; adjust bitrate or use cloud storage |
+| High CPU usage | Verify single instance running, reduce detection frequency |
+| Large file sizes | Normal with 1920×1080 @ 30 FPS; plan storage accordingly |
 | Missing snapshots | Check `snapshots/` folder permissions, verify detection occurred |
 
 ---
@@ -237,16 +227,25 @@ This architecture ensures:
 ## 📦 Deployment
 
 ### Standalone Executable
-- Download `Detection-Triggered Recorder.exe`
+- Download `OBSBOT Tiny2 Intelligent Security Monitor.exe`
 - No installation needed
 - No Python required on target machine
 - Icon in taskbar and window
-- Works on any Windows PC
+- Works on any Windows PC with USB support
 
 ### Source Distribution
 - Requires Python 3.8+
 - Install dependencies: `pip install -r requirements.txt`
-- Run: `python detection_triggered_recorder_dark.py`
+- Run: `python OBSBOT_Tiny2_Intelligent_Security_Monitor.py`
+
+---
+
+## 🔐 Data Privacy
+
+- **Local Processing**: All detection and recording happens locally on your machine
+- **No Cloud**: No data sent to external servers
+- **No Tracking**: Application doesn't collect any usage data
+- **Full Control**: You own all recordings and snapshots
 
 ---
 
@@ -262,19 +261,10 @@ MIT License - Open for academic and commercial use
 
 ---
 
-## 🔐 Data Privacy
-
-- **Local Processing**: All detection and recording happens locally on your machine
-- **No Cloud**: No data sent to external servers
-- **No Tracking**: Application doesn't collect any usage data
-- **Full Control**: You own all recordings and snapshots
-
----
-
 **Version**: 1.0.0 | **Status**: Production Ready ✅
 
 For updates and source code: [GitHub Repository]
 
 ---
 
-*Detection-Triggered Recorder - Intelligent surveillance when you need it*
+*OBSBOT Tiny2 Intelligent Security Monitor - Smart surveillance when you need it*

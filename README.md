@@ -309,9 +309,9 @@ This architecture ensures:
 - Works on any Windows PC with USB support
 
 ### Source Distribution
-- Requires Python 3.8+
+- Requires Python 3.8 - 3.11
 - Install dependencies: `pip install -r requirements.txt`
-- Run: `python OBSBOT_Tiny2_Intelligent_Security_Monitor.py`
+- Run: `python main.py`
 
 ---
 

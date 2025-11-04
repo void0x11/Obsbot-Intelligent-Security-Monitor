@@ -10,7 +10,8 @@ An AI-powered security monitoring application purpose-built for OBSBOT Tiny2 USB
 
 ### Smart Detection & Recording
 - **Real-Time Detection**: YOLOv8 neural network processes 30 FPS video stream for instant human detection
-- **Automatic Recording**: Records only when humans detected (no wasted storage on empty scenes)
+- **Automatic Recording**: Records only when humans detected
+- **Storage Effieceint**: it saves only videos when someone detected saves you tons of GBs.
 - **Intelligent Cooldown**: 6-second recording buffer after person leaves frame prevents fragmented clips
 - **Continuous Monitoring**: System stays alert 24/7 in standby mode with minimal CPU usage
 

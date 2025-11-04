@@ -1,4 +1,4 @@
-# Detection-Triggered Recorder
+# Detection-Triggered Recorder (Void-DTR)
 
 An **intelligent, event-driven surveillance system** that automatically captures video and screenshots upon detecting humans in real-time using AI-based vision processing.
 
